@@ -6,8 +6,12 @@
   "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
   "ignoreScripts": true,
   "internalChecksFilter": "strict",
-  "lockFileMaintenance": { "enabled": true },
   "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "groupName": "lockFileMaintenance",
+      "matchUpdateTypes": "lockFileMaintenance"
+    },
     {
       "matchPackagePatterns": ["^@metamask/eslint-config*"],
       "groupName": "ESLint config"
@@ -21,15 +25,15 @@
   },
   "prConcurrentLimit": 10,
   "rangeStrategy": "update-lockfile",
-  "repositories": ["Gudahtt/prettier-plugin-sort-json"],
+  "repositories": ["Gudahtt/prettier-plugin-sort-json-2"],
   "skipInstalls": false,
   "stabilityDays": 30,
   // Self-Hosted configuration
-  allowScripts: false,
-  allowedPostUpgradeCommands: ['yarn run allow-scripts auto'],
-  customEnvVariables: {
-    SKIP_ALLOW_SCRIPTS: 'true',
+  "allowScripts": false,
+  "allowedPostUpgradeCommands": ["yarn run allow-scripts auto"],
+  "customEnvVariables": {
+    "SKIP_ALLOW_SCRIPTS": "true",
   },
-  platform: 'github',
-  onboarding: false,
+  "platform": 'github',
+  "onboarding": false,
 }
